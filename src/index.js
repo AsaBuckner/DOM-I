@@ -46,6 +46,9 @@ const navItem3 = document.querySelector("nav a:nth-of-type(3)")
 const navItem4 = document.querySelector("nav a:nth-of-type(4)")
 const navItem5 = document.querySelector("nav a:nth-of-type(5)")
 const navItem6 = document.querySelector("nav a:nth-of-type(6)")
+const allLinks = document.querySelectorAll("header nav a")
+
+allLinks.forEach((a) => a.className = "italic")
 
 navItem1.textContent = siteContent["nav"]["nav-item-1"]
 navItem2.textContent = siteContent["nav"]["nav-item-2"]
