@@ -61,7 +61,7 @@ navItem6.textContent = siteContent["nav"]["nav-item-6"]
 
 const logoImg = document.querySelector("#logo-img")
 
-logoImg.src = "http://localhost:9000/img/logo.png"
+logoImg.src = siteContent["images"]["logo-img"]
 
 
 
@@ -72,71 +72,93 @@ const cta = document.querySelector(".cta")
 const ctaTitle = document.querySelector("h1")
 const ctaButton = document.querySelector(".cta button")
 
-ctaTitle.textContent = "DOM Is Awesome"
-ctaButton.textContent = "Get Started"
+ctaTitle.textContent = siteContent["cta"]["h1"]
+ctaButton.textContent = siteContent["cta"]["button"]
 
 
 //---------------------------------------------------------------------------------//
 
-const ctaImg = document.querySelector("#cta-img")
+const ctaImg = document.querySelector("img#cta-img")
 
-ctaImg.setAttribute("src", "http://localhost:9000/img/cta.png")
-
-
-
-//---------------------------------------------------------------------------------//
+ctaImg.src = siteContent["images"]["cta-img"]
 
 
-const mainCont = document.querySelector(".main-content")
-
-const featTitle = mainCont.querySelector("h4:nth-of-type(1)")
-const featCont = mainCont.querySelector("p:nth-of-type(1)")
-
-const aboutTitle = mainCont.querySelector(".main-content p:nth-of-type(1)")
-const aboutCont = mainCont.querySelector(".main-content p:nth-of-type(1)")
-
-const ServsTitle = mainCont.querySelector(".main-content h4:nth-of-type(3)")
-const ServsCont = mainCont.querySelector(".main-content p:nth-of-type(3)")
-
-const prodTitle = mainCont.querySelector(".main-content  h4:nth-of-type(4)")
-const prodCont = mainCont.querySelector(".main-content  p:nth-of-type(4)")
-
-const visionTitle = mainCont.querySelector("  h4:nth-of-type(5)")
-const visionCont = mainCont.querySelector("  p:nth-of-type(5)")
+//--------------------------------------------------------------------------------//
 
 
-featTitle.textContent = "Features"
-featCont.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-  
-aboutTitle.textContent = "About"
-aboutCont.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-  
-ServsTitle.textContent = "Services"
-ServsCont.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-  
-prodTitle.textContent = "Product"
-prodCont.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
-  
-visionTitle.textContent = "Vision"
-visionCont.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+const topCont = document.querySelector(".main-content .top-content")
+
+
+
+const featTitle = topCont.querySelector("div:nth-of-type(1) h4")
+const featCont = topCont.querySelector("div:nth-of-type(1) p")
+
+const aboutTitle = topCont.querySelector("div:nth-of-type(2) h4")
+const aboutCont = topCont.querySelector("div:nth-of-type(2) p")
+
+
+
+featTitle.textContent  = siteContent["main-content"]["features-h4"]
+featCont.textContent   = siteContent["main-content"]["features-content"]
+
+aboutTitle.textContent = siteContent["main-content"]["about-h4"]
+aboutCont.textContent  = siteContent["main-content"]["about-content"]
 
 
 
 //-----------------------------------------------------------------------------------//
 
 
+const middleImg = document.querySelector("img#middle-img")
+
+middleImg.src =  siteContent["images"]["accent-img"]
 
 
-const middleImg = document.querySelector("#middle-img")
+//-----------------------------------------------------------------------------------//
 
-middleImg.src="http://localhost:9000/img/accent.png"
-
-
+const botCont = document.querySelector(".main-content .bottom-content")
 
 
+const ServsTitle = botCont.querySelector("div.text-content:nth-of-type(1) h4")
+const ServsCont = botCont.querySelector("div:nth-of-type(1) p")
+
+const prodTitle = botCont.querySelector("div.text-content:nth-of-type(2) h4")
+const prodCont = botCont.querySelector("div.text-content:nth-of-type(2) p")
+
+const visionTitle = botCont.querySelector("div.text-content:nth-of-type(3) h4")
+const visionCont = botCont.querySelector("div.text-content:nth-of-type(3) p")
 
 
 
+ServsTitle.textContent = siteContent["main-content"]["services-h4"]
+ServsCont.textContent  = siteContent["main-content"]["services-content"]
+
+prodTitle.textContent  = siteContent["main-content"]["product-h4"]
+prodCont.textContent   = siteContent["main-content"]["product-content"]
+
+visionTitle.textContent = siteContent["main-content"]["vision-h4"]
+visionCont.textContent = siteContent["main-content"]["vision-content"]
 
 
+//-----------------------------------------------------------------------------------//
 
+const contactSec =  document.querySelector("section.contact")
+
+const contactTitle = contactSec.querySelector("h4")
+
+const Addy = contactSec.querySelector("p:nth-of-type(1)")
+const phone = contactSec.querySelector("p:nth-of-type(2)")
+const email = contactSec.querySelector("p:nth-of-type(3)")
+
+
+Addy.textContent = siteContent["contact"]["address"]
+contactTitle.textContent = siteContent["contact"]["contact-h4"]
+phone.textContent = siteContent["contact"]["phone"]
+email.textContent = siteContent["contact"]["email"]
+
+//-----------------------------------------------------------------------------------//
+
+const footer = document.querySelector("footer a")
+
+footer.textContent = siteContent["footer"]["copyright"]
+footer.className = "bold"
